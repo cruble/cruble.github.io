@@ -12,7 +12,7 @@ One of the most striking things about `Ruby` is its expressiveness. A `Ruby` blo
 
 As I learned new commands, I kept associating them with real-world scenarios like `if hungry then eat else work end`. So, I decided to translate some well-known cliches into *theoretically* working `Ruby`. 
 
-Since I'm a beginner, some of the syntax and operations might be off, but please feel free to suggest any changes/refactoring! Have a fun cliche that might look cool in `Ruby`? Please add it into the comments. 
+Since I'm a beginner, some of the syntax and operations might be off, but please feel free to suggest any changes/refactoring! Have a fun cliche that might look cool in `Ruby`? Please add it into the comments!
 
 Thanks to my teammate Cassidy Robertson for finding and sending me a great list of cliches. 
 
