@@ -4,7 +4,7 @@
   <title><![CDATA[Ruble on Ruby]]></title>
   <link href="http://cruble.github.io/atom.xml" rel="self"/>
   <link href="http://cruble.github.io/"/>
-  <updated>2015-04-05T10:26:26-04:00</updated>
+  <updated>2015-04-05T14:46:54-04:00</updated>
   <id>http://cruble.github.io/</id>
   <author>
     <name><![CDATA[Chad Ruble]]></name>
@@ -20,9 +20,11 @@
     <id>http://cruble.github.io/blog/2015/04/05/cliches-written-in-ruby</id>
     <content type="html"><![CDATA[<h4>Rewriting Cliches into Ruby</h4>
 
-<p>One of the most striking things about <code>Ruby</code> is its expressiveness. Learning about loops, assignments, and conditionals, a <code>Ruby</code> command oftens reads with the logic and fluidity of regular language. I kept hearing sentences and wondering how they would translate into <em>theoretically</em> working <code>Ruby</code>. I tried to translate some well-known cliches into Ruby and, since I&rsquo;m a beginner, some of the syntax might be off. If so, let me know! And feel free to suggest any refactoring. I don&rsquo;t mind! It&rsquo;s a fun exercise.</p>
+<p>One of the most striking things about <code>Ruby</code> is its expressiveness. A <code>Ruby</code> block of programming oftens reads with the logic and fluidity of spoken language. Which makes sense, because it was designed with the programmer in mind.</p>
 
-<p>Feel free to add your own coded clices to the comments. Also, let me know if there are any bugs in the code.</p>
+<p>As I learned new commands, I kept associating them with real-world scenarios like <code>if hungry then eat else work end</code>. So, I decided to translate some well-known cliches into <em>theoretically</em> working <code>Ruby</code>.</p>
+
+<p>Since I&rsquo;m a beginner, some of the syntax and operations might be off, but please feel free to suggest any changes/refactoring! Have a fun cliche that might look cool in <code>Ruby</code>? Please add it into the comments!</p>
 
 <p>Thanks to my teammate Cassidy Robertson for finding and sending me a great list of cliches.</p>
 
