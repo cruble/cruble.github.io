@@ -13,7 +13,7 @@
   <meta name="author" content="Chad Ruble">
 
   
-  <meta name="description" content=" All Posts My First Post on Octopress Hiya! written in flatiron&nbsp;school ">
+  <meta name="description" content="All Posts Coding Cliches Rewriting Cliches into Ruby One of the most striking things about Ruby is its expressiveness. Learning about loops, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -50,6 +50,146 @@
 
   <div class="article-list">
     <div class="container">
+      
+      
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <article>
+  <h2><a href="/blog/2015/04/05/cliches-written-in-ruby/">Coding Cliches</a></h2>
+  
+  <p>
+    <h4>Rewriting Cliches into Ruby</h4>
+
+
+
+
+<p>One of the most striking things about <code>Ruby</code> is its expressiveness. Learning about loops, assignments, and conditionals, a <code>Ruby</code> command oftens reads with the logic and fluidity of regular language. I kept hearing sentences and wondering how they would translate into <em>theoretically</em> working <code>Ruby</code>. I tried to translate some well-known cliches into Ruby and, since I&rsquo;m a beginner, some of the syntax might be off. If so, let me know! And feel free to suggest any refactoring. I don&rsquo;t mind! It&rsquo;s a fun exercise.</p>
+
+
+
+
+<p>Feel free to add your own coded clices to the comments. Also, let me know if there are any bugs in the code.</p>
+
+
+
+
+<p>Thanks to my teammate Cassidy Robertson for finding and sending me a great list of cliches.</p>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">it_pours</span> <span class="o">=</span> <span class="s2">&quot;It&#39;s really coming down!&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">while</span> <span class="n">it_rains</span>
+</span><span class='line'>  <span class="n">it_pours</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">lemons</span> <span class="o">=</span> <span class="o">[]</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">while</span> <span class="o">!</span><span class="n">lemons</span><span class="o">.</span><span class="n">empty</span>
+</span><span class='line'>  <span class="n">make_lemonade</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">make_lemonade</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s2">&quot;Take lemon. Squeeze. Add water. Add sugar. Drink. Be refreshed.&quot;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">what_goes_around</span> <span class="o">=</span> <span class="n">what_comes_around</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">wounds</span> <span class="o">=</span> <span class="o">[]</span>
+</span><span class='line'><span class="n">healed_wounds</span> <span class="o">=</span> <span class="o">[]</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">!</span><span class="n">wounds</span><span class="o">.</span><span class="n">empty</span>
+</span><span class='line'>  <span class="n">healed_wounds</span> <span class="o">&lt;&lt;</span> <span class="n">wounds</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="p">{</span> <span class="o">|</span> <span class="n">wound</span> <span class="o">|</span> <span class="nb">sleep</span><span class="p">(</span><span class="n">time</span><span class="p">)</span> <span class="p">}</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">case</span> <span class="n">fairness</span>
+</span><span class='line'><span class="k">when</span> <span class="n">love</span>
+</span><span class='line'>  <span class="n">all_is_fair</span> <span class="o">=</span> <span class="kp">true</span>
+</span><span class='line'><span class="k">when</span> <span class="n">war</span>
+</span><span class='line'>  <span class="n">all_is_fair</span> <span class="o">=</span> <span class="kp">true</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-04-05T09:57:43-04:00" pubdate data-updated="true"></time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/flatiron-school/'>flatiron&nbsp;school</a>
+  
+</span>
+
+
+  </span>
+
+  
+</article>
+
+        </div>
+      </div>
       
       
       <div class="row">

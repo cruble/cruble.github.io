@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Flatiron&nbsp;school | Ruble on Ruby]]></title>
   <link href="http://cruble.github.io/blog/categories/flatiron-school/atom.xml" rel="self"/>
   <link href="http://cruble.github.io/"/>
-  <updated>2015-04-05T09:51:28-04:00</updated>
+  <updated>2015-04-05T10:26:26-04:00</updated>
   <id>http://cruble.github.io/</id>
   <author>
     <name><![CDATA[Chad Ruble]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Coding Cliches]]></title>
+    <link href="http://cruble.github.io/blog/2015/04/05/cliches-written-in-ruby/"/>
+    <updated>2015-04-05T09:57:43-04:00</updated>
+    <id>http://cruble.github.io/blog/2015/04/05/cliches-written-in-ruby</id>
+    <content type="html"><![CDATA[<h4>Rewriting Cliches into Ruby</h4>
+
+<p>One of the most striking things about <code>Ruby</code> is its expressiveness. Learning about loops, assignments, and conditionals, a <code>Ruby</code> command oftens reads with the logic and fluidity of regular language. I kept hearing sentences and wondering how they would translate into <em>theoretically</em> working <code>Ruby</code>. I tried to translate some well-known cliches into Ruby and, since I&rsquo;m a beginner, some of the syntax might be off. If so, let me know! And feel free to suggest any refactoring. I don&rsquo;t mind! It&rsquo;s a fun exercise.</p>
+
+<p>Feel free to add your own coded clices to the comments. Also, let me know if there are any bugs in the code.</p>
+
+<p>Thanks to my teammate Cassidy Robertson for finding and sending me a great list of cliches.</p>
+
+<pre><code class="ruby">it_pours = "It's really coming down!"
+
+while it_rains
+  it_pours
+end 
+</code></pre>
+
+<pre><code class="ruby">lemons = []
+
+while !lemons.empty
+  make_lemonade
+end 
+
+def make_lemonade 
+  puts "Take lemon. Squeeze. Add water. Add sugar. Drink. Be refreshed."
+end
+</code></pre>
+
+<pre><code class="ruby">what_goes_around = what_comes_around
+</code></pre>
+
+<pre><code class="ruby">wounds = []
+healed_wounds = []
+
+if !wounds.empty
+  healed_wounds &lt;&lt; wounds.map do { | wound | sleep(time) } 
+end 
+</code></pre>
+
+<pre><code class="ruby">case fairness 
+when love
+  all_is_fair = true
+when war
+  all_is_fair = true
+end 
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[My First Post on Octopress]]></title>
