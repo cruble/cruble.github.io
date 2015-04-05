@@ -8,9 +8,11 @@ categories: "Flatiron&nbsp;School"
 
 ####Rewriting Cliches into Ruby 
 
-One of the most striking things about `Ruby` is its expressiveness. Learning about loops, assignments, and conditionals, a `Ruby` command oftens reads with the logic and fluidity of regular language. I kept hearing sentences and wondering how they would translate into *theoretically* working `Ruby`. I tried to translate some well-known cliches into Ruby and, since I'm a beginner, some of the syntax might be off. If so, let me know! And feel free to suggest any refactoring. I don't mind! It's a fun exercise. 
+One of the most striking things about `Ruby` is its expressiveness. A `Ruby` block of programming oftens reads with the logic and fluidity of spoken language. Which makes sense, because it was designed with the programmer in mind. 
 
-Feel free to add your own coded clices to the comments. Also, let me know if there are any bugs in the code. 
+As I learned new commands, I kept associating them with real-world scenarios like `if hungry then eat else work end`. So, I decided to translate some well-known cliches into *theoretically* working `Ruby`. 
+
+Since I'm a beginner, some of the syntax and operations might be off, but please feel free to suggest any changes/refactoring! Have a fun cliche that might look cool in `Ruby`? Please add it into the comments. 
 
 Thanks to my teammate Cassidy Robertson for finding and sending me a great list of cliches. 
 
