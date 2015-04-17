@@ -28,7 +28,7 @@ This is where Rake gets and gives instructions about how to run your program. Yo
 
 ####Arguments
 
-A Rake task can also take arguments.  I won't go over the syntax here, but will point you to this very comprehensive guide. 
+A Rake task can also take arguments.  I won't go over the syntax here, but will point you to this comprehensive answer on [Stack Overflow](http://stackoverflow.com/questions/825748/how-do-i-pass-command-line-arguments-to-a-rake-task). 
 
 ####Scheduling your scripts
 
