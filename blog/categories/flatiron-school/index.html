@@ -55,6 +55,89 @@
         <div class="row">
           <div class="col-md-offset-3 col-md-6">
             <article>
+  <h2><a href="/blog/2015/04/16/hello-rake/">Hello_Rake</a></h2>
+  
+  <p>
+    <p>I recently got my first taste of Rake, a powerful build language developed by Jim Weirich, a famous developer and contributor to the Ruby language. In addition to creating Rake, he was part of a team of developers who built RubyGems in 2003.</p>
+
+<p>Rake tops the list as the most downloaded gem of all time with current download numbers within striking distance of <a href="https://rubygems.org/stats">70 million</a>. It is a ubiquitous file management tool. Since I am new to Ruby and even newer to Rake, I thought it would be useful to provide a quick introduction to Rake.</p>
+
+<p>My first encounter with Rake was in my installation of this Octopress blog. I had no idea that I was also in such esteemed company as <a href="http://martinfowler.com/articles/rake.html">Martin Fowler</a>, who builds his website with Rake and wrote an extensive <a href="http://martinfowler.com/articles/rake.html">blog post</a> about why he likes it. It&rsquo;s worth checking out.</p>
+
+<p>For starters Rake is a DSL. No, we aren&rsquo;t talking about an old-fashioned Internet connection. A DSL is a Domain Specific Language, which is essentially a computer language that&rsquo;s targeted to a specific purpose. CSS, regular expressions, and SQL are three other examples of DSLs that I have encountered so far.</p>
+
+<h4>Dependencies</h4>
+
+<p>One of the most useful aspects of using Rake is that it can track and group your programs dependencies. Every program has files that it requires to run and a Rake file is the perfect way of managing all of the files that make up your environment.</p>
+
+<h4>Namespaces</h4>
+
+<p>For example, you can group different dependencies based on if you are working in a <code>development</code> or <code>production</code> environment. You aren&rsquo;t going to need your <code>rspec</code> testing files in a production environment or for your deployed web application. In theory, by the time its live, you have already tested things out.</p>
+
+<h4>Tasks</h4>
+
+<p>This is where Rake gets and gives instructions about how to run your program. You can describe or <code>desc</code> your tasks as well as give them <code>prerequisites</code> detailing other tasks to run before your task.</p>
+
+<h4>Arguments</h4>
+
+<p>A Rake task can also take arguments.  I won&rsquo;t go over the syntax here, but will point you to this very comprehensive guide.</p>
+
+<h4>Scheduling your scripts</h4>
+
+<p>As you get more comfortable creating and running your tasks with Rake, you might find that there are some you want to do outside of the regular testing cycle. Perhaps you want to test an email server in the middle of the night. Or schedule a monthly report. With Rake, you can do that!</p>
+
+<p><code>cron</code> is a Unix utility for scheduling and executing commands. You can access it from the command line by typing <code>crontab -e</code> called <code>cron</code> to use Rake to schedule your tasks. You might have a program that you want to test in the middle of the night (while you are sleeping). You can use rake to test it.</p>
+
+<p>You can read more about using <code>cron</code> to schedule command line <a href="http://tutorials.jumpstartlab.com/topics/systems/automation.html">here</a>.</p>
+
+<p>Rake is at the heart of a programmer&rsquo;s workflow. I will leave you with more thoughtful works from Martin Fowler:</p>
+
+<blockquote><p>Scripts are a natural for building stuff in many ways, and rake adds just enough features to provide a really good build system on top of a fine language. We also have the advantage that ruby is an open source language that runs on all the platforms that I need.</p></blockquote>
+
+<p>As my programs get more and more complex in terms of environment, function, testing, and dependencies, I&rsquo;m looking forward to delving even deeper into its syntax and uses.</p>
+
+<p>You might have noticed that the title of this post is Hello_Rake&hellip; Well, that underscore wasn&rsquo;t my way of being &ldquo;programmery&rdquo;. Octopress didn&rsquo;t like having Rake in the title of the post. I&rsquo;m sure there was a way around that by escaping the characters properly, but I figured that&rsquo;s something for another day.</p>
+
+<p>Happy Raking.</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-04-16T22:11:20-04:00" pubdate data-updated="true"></time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/flatiron-school/'>flatiron&nbsp;school</a>
+  
+</span>
+
+
+  </span>
+
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
   <h2><a href="/blog/2015/04/05/cliches-written-in-ruby/">Coding Cliches</a></h2>
   
   <p>
