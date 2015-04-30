@@ -4,7 +4,7 @@
   <title><![CDATA[Ruble on Ruby]]></title>
   <link href="http://cruble.github.io/atom.xml" rel="self"/>
   <link href="http://cruble.github.io/"/>
-  <updated>2015-04-17T12:23:43-04:00</updated>
+  <updated>2015-04-30T15:22:13-04:00</updated>
   <id>http://cruble.github.io/</id>
   <author>
     <name><![CDATA[Chad Ruble]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Immersive Web]]></title>
+    <link href="http://cruble.github.io/blog/2015/04/30/the-immersive-web/"/>
+    <updated>2015-04-30T14:20:59-04:00</updated>
+    <id>http://cruble.github.io/blog/2015/04/30/the-immersive-web</id>
+    <content type="html"><![CDATA[<p><img src="https://dbvc4uanumi2d.cloudfront.net/cdn/4.4.14/wp-content/themes/oculus/img/order/dk2-product.jpg" width="500"></p>
+
+<p>When Facebook bought <a href="https://www.oculus.com/">Oculus Rift</a> for $2 Billion just over a year ago, it marked the beginning of a new era in Virtual Reality. While there have been many attempts at virtual reality systems, the Oculus is the first one that promises to bring a truly immersive virtual reality experience to consumers. Even though Oculus has yet to released a consumer product, its second generation development kit sold over 100,000 units.</p>
+
+<p>The first wave of enthusiasm around VR, as with many early tech adopters, are gamers. Playing Call of Duty or Minecraft in a 360 virtual environment will certainly hold an appeal to the largest and most motivated segment of users. Guys like this:</p>
+
+<p><img src="http://41.media.tumblr.com/5bcadd0107727f2f7485b17f678e8d7c/tumblr_n2qrnhCxYF1twpqixo1_1280.jpg" width="600"></p>
+
+<p>But in a Facebook post to announce his company&rsquo;s purchase of the VR startup, Mark Zuckerberg said:</p>
+
+<blockquote><p>After games, we&rsquo;re going to make Oculus a platform for many other experiences. Imagine enjoying a court side seat at a game, studying in a classroom of students and teachers all over the world or consulting with a doctor face-to-face &ndash; just by putting on goggles in your home.
+This is really a new communication platform. By feeling truly present, you can share unbounded spaces and experiences with the people in your life. Imagine sharing not just moments with your friends online, but entire experiences and adventures.</p></blockquote>
+
+<p>What will it be like to navigate the web in a 360 immersive environment? Will our kids wonder how we all dealt with these tiny 15&#8221; screens as they consume their content in 360 degrees?</p>
+
+<p>360 content creation won&rsquo;t hit the mainstream until devices like the Oculus are widely (and inexpensively) available. And we are a ways from that. Cutting edge content creators are already making incredible experiences enabled by the Oculus Rift.</p>
+
+<p>You can fly like a bird with Birdly.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AyJ2BC3-v3Y" frameborder="0" allowfullscreen></iframe>
+
+
+<p>You can also experience terror like no film can provide.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i-w9lU-HaB4" frameborder="0" allowfullscreen></iframe>
+
+
+<p>One format that we will all hear more about as VR grows is 360 video. Without spending a lot of time or money, its really hard to put together a 360 video. But imagine if you can drop a 360 camera in the middle of a birthday party (or concert or wedding), then other people can experience that event by being surrounded by it. I would suspect that one of first widely adopted non-gaming VR use will be in shooting and sharing 360 video.</p>
+
+<p>In fact, <a href="http://youtubecreator.blogspot.com/2015/03/a-new-way-to-see-and-share-your-world.html">YouTube</a> started to support 360 video as of March of this year. The selections are slim for now, but as the camera as well as software technology improves, 360 video will no be a specialized niche, but just another way to share our stories.</p>
+
+<p>In addition to 360 video we will see 3D worlds, location tours, product demos. Many of them will be powered by well documented and distributed frameworks and libraries such as three.js and WebGL, which already support Oculus Rift output.</p>
+
+<p>What does this mean to web developers? Not much for the near and mid-term, but it is worth thinking about how we will migrate our 2D content into a 3D world. And how this new immersive medium will change the way we tell stories, present information, and navigate through 360 degrees of content.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hello_Rake]]></title>

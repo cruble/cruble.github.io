@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Flatiron&nbsp;school | Ruble on Ruby]]></title>
+  <title><![CDATA[Category: Flatiron-school | Ruble on Ruby]]></title>
   <link href="http://cruble.github.io/blog/categories/flatiron-school/atom.xml" rel="self"/>
   <link href="http://cruble.github.io/"/>
-  <updated>2015-04-17T12:23:43-04:00</updated>
+  <updated>2015-04-30T15:22:13-04:00</updated>
   <id>http://cruble.github.io/</id>
   <author>
     <name><![CDATA[Chad Ruble]]></name>
@@ -14,114 +14,44 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Hello_Rake]]></title>
-    <link href="http://cruble.github.io/blog/2015/04/16/hello-rake/"/>
-    <updated>2015-04-16T22:11:20-04:00</updated>
-    <id>http://cruble.github.io/blog/2015/04/16/hello-rake</id>
-    <content type="html"><![CDATA[<p>I recently got my first taste of Rake, a powerful build language developed by Jim Weirich, a famous developer and contributor to the Ruby language. In addition to creating Rake, he was part of a team of developers who built RubyGems in 2003.</p>
+    <title type="html"><![CDATA[The Immersive Web]]></title>
+    <link href="http://cruble.github.io/blog/2015/04/30/the-immersive-web/"/>
+    <updated>2015-04-30T14:20:59-04:00</updated>
+    <id>http://cruble.github.io/blog/2015/04/30/the-immersive-web</id>
+    <content type="html"><![CDATA[<p><img class="<a" src="href="https://dbvc4uanumi2d.cloudfront.net/cdn/4.4.14/wp-content/themes/oculus/img/order/dk2-product.jpg">https://dbvc4uanumi2d.cloudfront.net/cdn/4.4.14/wp-content/themes/oculus/img/order/dk2-product.jpg</a>&#8221; width=&#8221;500&#8221;></p>
 
-<p>Rake tops the list as the most downloaded gem of all time with current download numbers within striking distance of <a href="https://rubygems.org/stats">70 million</a>. It is a ubiquitous file management tool. Since I am new to Ruby and even newer to Rake, I thought it would be useful to provide a quick introduction to Rake.</p>
+<p>When Facebook bought <a href="https://www.oculus.com/">Oculus Rift</a> for $2 Billion just over a year ago, it marked the beginning of a new era in Virtual Reality. While there have been many attempts at virtual reality systems, the Oculus is the first one that promises to bring a truly immersive virtual reality experience to consumers. Even though Oculus has yet to released a consumer product, its second generation development kit sold over 100,000 units.</p>
 
-<p>My first encounter with Rake was in my installation of this Octopress blog. I had no idea that I was also in such esteemed company as <a href="http://martinfowler.com/articles/rake.html">Martin Fowler</a>, who builds his website with Rake and wrote an extensive <a href="http://martinfowler.com/articles/rake.html">blog post</a> about why he likes it. It&rsquo;s worth checking out.</p>
+<p>The first wave of enthusiasm around VR, as with many early tech adopters, are gamers. Playing Call of Duty or Minecraft in a 360 virtual environment will certainly hold an appeal to the largest and most motivated segment of users. Guys like this:</p>
 
-<p>For starters Rake is a DSL. No, we aren&rsquo;t talking about an old-fashioned Internet connection. A DSL is a Domain Specific Language, which is essentially a computer language that&rsquo;s targeted to a specific purpose. CSS, regular expressions, and SQL are three other examples of DSLs that I have encountered so far.</p>
+<p><img class="<a" src="href="http://41.media.tumblr.com/5bcadd0107727f2f7485b17f678e8d7c/tumblr_n2qrnhCxYF1twpqixo1_1280.jpg">http://41.media.tumblr.com/5bcadd0107727f2f7485b17f678e8d7c/tumblr_n2qrnhCxYF1twpqixo1_1280.jpg</a>&#8221; width=&#8221;600&#8221;></p>
 
-<h4>Dependencies</h4>
+<p>But in a Facebook post to announce his company&rsquo;s purchase of the VR startup, Mark Zuckerberg said:</p>
 
-<p>One of the most useful aspects of using Rake is that it can track and group your programs dependencies. Every program has files that it requires to run and a Rake file is the perfect way of managing all of the files that make up your environment.</p>
+<blockquote><p>After games, we&rsquo;re going to make Oculus a platform for many other experiences. Imagine enjoying a court side seat at a game, studying in a classroom of students and teachers all over the world or consulting with a doctor face-to-face &ndash; just by putting on goggles in your home.
+This is really a new communication platform. By feeling truly present, you can share unbounded spaces and experiences with the people in your life. Imagine sharing not just moments with your friends online, but entire experiences and adventures.</p></blockquote>
 
-<h4>Namespaces</h4>
+<p>What will it be like to navigate the web in a 360 immersive environment? Will our kids wonder how we all dealt with these tiny 15&#8221; screens as they consume their content in 360 degrees?</p>
 
-<p>For example, you can group different dependencies based on if you are working in a <code>development</code> or <code>production</code> environment. You aren&rsquo;t going to need your <code>rspec</code> testing files in a production environment or for your deployed web application. In theory, by the time its live, you have already tested things out.</p>
+<p>360 content creation won&rsquo;t hit the mainstream until devices like the Oculus are widely (and inexpensively) available. And we are a ways from that. Cutting edge content creators are already making incredible experiences enabled by the Oculus Rift.</p>
 
-<h4>Tasks</h4>
+<p>You can fly like a bird with Birdly.</p>
 
-<p>This is where Rake gets and gives instructions about how to run your program. You can describe or <code>desc</code> your tasks as well as give them <code>prerequisites</code> detailing other tasks to run before your task.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AyJ2BC3-v3Y" frameborder="0" allowfullscreen></iframe>
 
-<h4>Arguments</h4>
 
-<p>A Rake task can also take arguments.  I won&rsquo;t go over the syntax here, but will point you to this comprehensive answer on <a href="http://stackoverflow.com/questions/825748/how-do-i-pass-command-line-arguments-to-a-rake-task">Stack Overflow</a>.</p>
+<p>You can also experience terror like no film can provide.</p>
 
-<h4>Scheduling your scripts</h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i-w9lU-HaB4" frameborder="0" allowfullscreen></iframe>
 
-<p>As you get more comfortable creating and running your tasks with Rake, you might find that there are some you want to do outside of the regular testing cycle. Perhaps you want to test an email server in the middle of the night. Or schedule a monthly report. With Rake, you can do that!</p>
 
-<p><code>cron</code> is a Unix utility for scheduling and executing commands. You can access it from the command line by typing <code>crontab -e</code> called <code>cron</code> to use Rake to schedule your tasks. You might have a program that you want to test in the middle of the night (while you are sleeping). You can use rake to test it.</p>
+<p>One format that we will all hear more about as VR grows is 360 video. Without spending a lot of time or money, its really hard to put together a 360 video. But imagine if you can drop a 360 camera in the middle of a birthday party (or concert or wedding), then other people can experience that event by being surrounded by it. I would suspect that one of first widely adopted non-gaming VR use will be in shooting and sharing 360 video.</p>
 
-<p>You can read more about using <code>cron</code> to schedule command line <a href="http://tutorials.jumpstartlab.com/topics/systems/automation.html">here</a>.</p>
+<p>In fact, <a href="http://youtubecreator.blogspot.com/2015/03/a-new-way-to-see-and-share-your-world.html">YouTube</a> started to support 360 video as of March of this year. The selections are slim for now, but as the camera as well as software technology improves, 360 video will no be a specialized niche, but just another way to share our stories.</p>
 
-<p>Rake is at the heart of a programmer&rsquo;s workflow. I will leave you with more thoughtful works from Martin Fowler:</p>
+<p>In addition to 360 video we will see 3D worlds, location tours, product demos. Many of them will be powered by well documented and distributed frameworks and libraries such as three.js and WebGL, which already support Oculus Rift output.</p>
 
-<blockquote><p>Scripts are a natural for building stuff in many ways, and rake adds just enough features to provide a really good build system on top of a fine language. We also have the advantage that ruby is an open source language that runs on all the platforms that I need.</p></blockquote>
-
-<p>As my programs get more and more complex in terms of environment, function, testing, and dependencies, I&rsquo;m looking forward to delving even deeper into its syntax and uses.</p>
-
-<p>You might have noticed that the title of this post is Hello_Rake&hellip; Well, that underscore wasn&rsquo;t my way of being &ldquo;programmery&rdquo;. Octopress didn&rsquo;t like having Rake in the title of the post. I&rsquo;m sure there was a way around that by escaping the characters properly, but I figured that&rsquo;s something for another day.</p>
-
-<p>Happy Raking.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Coding Cliches]]></title>
-    <link href="http://cruble.github.io/blog/2015/04/05/cliches-written-in-ruby/"/>
-    <updated>2015-04-05T09:57:43-04:00</updated>
-    <id>http://cruble.github.io/blog/2015/04/05/cliches-written-in-ruby</id>
-    <content type="html"><![CDATA[<h4>Rewriting Cliches into Ruby</h4>
-
-<p>One of the most striking things about <code>Ruby</code> is its expressiveness. A <code>Ruby</code> block of programming oftens reads with the logic and fluidity of spoken language. Which makes sense, because it was designed with the programmer in mind.</p>
-
-<p>As I learned new commands, I kept associating them with real-world scenarios like <code>if hungry then eat else work end</code>. So, I decided to translate some well-known cliches into <em>theoretically</em> working <code>Ruby</code>.</p>
-
-<p>Since I&rsquo;m a beginner, some of the syntax and operations might be off, but please feel free to suggest any changes/refactoring! Have a fun cliche that might look cool in <code>Ruby</code>? Please add it into the comments!</p>
-
-<p>Thanks to my teammate Cassidy Robertson for finding and sending me a great list of cliches.</p>
-
-<pre><code class="ruby">it_pours = "It's really coming down!"
-
-while it_rains
-  it_pours
-end 
-</code></pre>
-
-<pre><code class="ruby">lemons = []
-
-while !lemons.empty
-  make_lemonade
-end 
-
-def make_lemonade 
-  puts "Take lemon. Squeeze. Add water. Add sugar. Drink. Be refreshed."
-end
-</code></pre>
-
-<pre><code class="ruby">what_goes_around = what_comes_around
-</code></pre>
-
-<pre><code class="ruby">wounds = []
-healed_wounds = []
-
-if !wounds.empty
-  healed_wounds &lt;&lt; wounds.map do { | wound | sleep(time) } 
-end 
-</code></pre>
-
-<pre><code class="ruby">case fairness 
-when love
-  all_is_fair = true
-when war
-  all_is_fair = true
-end 
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My First Post on Octopress]]></title>
-    <link href="http://cruble.github.io/blog/2015/04/03/my-first-post-on-octopress/"/>
-    <updated>2015-04-03T22:08:08-04:00</updated>
-    <id>http://cruble.github.io/blog/2015/04/03/my-first-post-on-octopress</id>
-    <content type="html"><![CDATA[<p>Hiya!</p>
+<p>What does this mean to web developers? Not much for the near and mid-term, but it is worth thinking about how we will migrate our 2D content into a 3D world. And how this new immersive medium will change the way we tell stories, present information, and navigate through 360 degrees of content.</p>
 ]]></content>
   </entry>
   
