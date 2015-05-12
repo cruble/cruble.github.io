@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>TimeCoder - a Handy Sublime Text 3 Plugin - Ruble on Ruby</title>
+  <meta name="author" content="Chad Ruble">
+
+  
+  <meta name="description" content="TimeCoder - a Handy Sublime Text 3 Plugin written One of the cool things about the Flatiron School is that every lecture is recorded. That way, it &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://cruble.github.io/blog/2015/05/12/timecoder-a-handy-sublime-text-3-plugin">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Ruble on Ruby" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+
+</head>
+
+  <body>
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>TimeCoder - a Handy Sublime Text 3 Plugin</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-05-12T17:47:28-04:00" pubdate data-updated="true"></time>
+          
+
+
+        </div>
+        <p>One of the cool things about the Flatiron School is that every lecture is recorded. That way, it is easy to go back over a topic that might still be fuzzy - or that you might want to review after gaining more perspective. But these lectures can be two hours long and cover a lot of ground. It can be hard to get right to a specific area or topic.</p>
+
+<p>Our instructor, Steven Nunez has us all clap at the beginning of a lecture, for his own audio sync (and to wake us up). But it also marks the beginning of his video (or close to it). I thought my review sessions could be a lot more effecient if I had a timecode to match my notes. I write in Sublime and it turns out that it has a robust API and its pretty straightforward to get started with Sublime Text Plugin development. Forget about the fact that their language is based in Python and I have been spending the last 6+ weeks learning Ruby.</p>
+
+<p>In the words of a famous programmer, &ldquo;We&rsquo;re programmers, damnit!&rdquo;  So I went for it.</p>
+
+<p>I&rsquo;ll go over the steps I took to create TimeCoder, my first Sublime Text 3 Plugin. But for a comprehensive tutorial, I recommend <a href="http://code.tutsplus.com/tutorials/how-to-create-a-sublime-text-2-plugin--net-22685">this one</a> and <a href="https://clarknikdelpowell.com/blog/creating-sublime-text-3-plugins-part-1/">this one</a> as good starting points. You&rsquo;ll also want to take a good look at the <a href="https://www.sublimetext.com/docs/3/api_reference.html">Sublime Text API Reference</a>. You, too, can extend the functionality of your text editor with ease. Before I do that, here&rsquo;s a short video showing the functionality of TimeCoder.</p>
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/4lFmU_xLSe4" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Sublime Makes it really easy to create a plug in. You go to Tools->New Plugin&hellip; and you get a new document with some python code to get you started.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">sublime</span><span class="o">,</span> <span class="nn">sublime_plugin</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">ExampleCommand</span><span class="p">(</span><span class="n">sublime_plugin</span><span class="o">.</span><span class="n">TextCommand</span><span class="p">):</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edit</span><span class="p">):</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">edit</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>On a mac, you store this file in a new folder in this directory. There you will put your .py file as well as your .sublime-keymap and sublime-menu files. More on those in a second.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">Users</span><span class="o">/</span><span class="err">”</span><span class="n">Username</span><span class="err">”</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Application</span> <span class="n">Support</span><span class="o">/</span><span class="n">Sublime</span> <span class="n">Text</span> <span class="mi">3</span><span class="o">/</span><span class="n">Packages</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Once its there, you call it by typing the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">view</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="s">&#39;example&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But obviously, you and your users will want a different way of calling the command. Later, we&rsquo;ll add key bindings to these commands.</p>
+
+<p>I created two commands. One that starts the timer and sets a note to the top of the document with the start time. And a second one that marks the timer.  Here&rsquo;s all the code needed for the plug in! Just 29 lines of code and I have saved myself a lot of time and grief looking for some particular gem of wisdom.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">sublime</span><span class="o">,</span> <span class="nn">sublime_plugin</span><span class="o">,</span> <span class="nn">datetime</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">start_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">StarttimeCommand</span><span class="p">(</span><span class="n">sublime_plugin</span><span class="o">.</span><span class="n">TextCommand</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edit</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">global</span> <span class="n">start_time</span>
+</span><span class='line'>        <span class="n">start_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">start_time_stamp</span> <span class="o">=</span> <span class="s">&quot;// Start Time: </span><span class="si">%s</span><span class="se">\t</span><span class="s"> // Timer: 00:00:00</span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">start_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&quot;%H:%M:%S&quot;</span><span class="p">))</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">edit</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">start_time_stamp</span><span class="p">)</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s">&quot;timecoder&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s">&quot;start_time&quot;</span><span class="p">:</span> <span class="n">start_time</span> <span class="p">})</span>
+</span><span class='line'>    <span class="k">pass</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">TimecoderCommand</span><span class="p">(</span><span class="n">sublime_plugin</span><span class="o">.</span><span class="n">TextCommand</span><span class="p">):</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edit</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">global</span> <span class="n">start_time</span>
+</span><span class='line'>        <span class="n">time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span><span class='line'>        <span class="n">elapsed_time</span> <span class="o">=</span> <span class="n">time</span> <span class="o">-</span> <span class="n">start_time</span>
+</span><span class='line'>        <span class="n">s</span> <span class="o">=</span> <span class="n">elapsed_time</span><span class="o">.</span><span class="n">seconds</span>
+</span><span class='line'>        <span class="n">hours</span><span class="p">,</span> <span class="n">remainder</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">remainder</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">timestamp</span> <span class="o">=</span> <span class="s">&#39;&lt;</span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="s">&gt;</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span><span class="p">)</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">edit</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">sel</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">timestamp</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">pass</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So, how to get those key bindins to work. Create a file called <code>Default (OSX).sublime-keymap</code>. There are other ones for Windows as well as Linux, but I made with with my Flatiron cohort in mind and we are all on Macs.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="nt">&quot;keys&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ctrl+t&quot;</span><span class="p">],</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;timecoder&quot;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="nt">&quot;keys&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ctrl+y&quot;</span><span class="p">],</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;starttime&quot;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So, the next time Steven mentions something amazing that you only have a 69% understanding. Mark the time, watch that part of the video and bump it up to 75% or even 80%! Why not aim big!</p>
+
+<p>The GIT repository is <a href="https://github.com/cruble/sublime-timecoder">here</a>. Feel free to download and use. Just put this into a folder in that /Packages directory listed above. And feel free to tinker around with it. Let me know how it goes!</p>
+
+<p>Thanks to Parker Lawrence for helping me debug the timer!</p>
+
+
+        <hr class="divider-short"/>
+
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2015/05/12/timecoder-a-handy-sublime-text-3-plugin/" title="Previous Post: Timecoder A Handy Sublime Text 3 Plugin">&laquo; Previous: Timecoder A Handy Sublime Text 3 Plugin</a>
+        
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/chadruble"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/cruble"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Powered by <a href="http://octopress.org/">Octopress</a>. Designed by <a href="http://AdrianArtiles.com">Adrian Artiles</a>.</h4>
+</div>
+
+
+    </div>
+  </div>
+</footer>
+
+    
+  </body>
+</html>
