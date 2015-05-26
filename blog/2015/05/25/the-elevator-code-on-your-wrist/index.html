@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The Elevator Code on Your Wrist - Ruble on Ruby</title>
+  <meta name="author" content="Chad Ruble">
+
+  
+  <meta name="description" content="The Elevator Code on Your Wrist written At the Flatiron School, we have been covering a lot of ground - from Javascript to JQuery, Rake to Rails. I &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://cruble.github.io/blog/2015/05/25/the-elevator-code-on-your-wrist">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Ruble on Ruby" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+
+</head>
+
+  <body>
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>The Elevator Code on Your Wrist</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-05-25T19:23:06-04:00" pubdate data-updated="true"></time>
+          
+
+
+        </div>
+        <p><img src="http://dadhoc.com/wp-content/uploads/2015/05/pebble_elevator.jpg" width="500"></p>
+
+<p>At the Flatiron School, we have been covering a lot of ground - from Javascript to JQuery, Rake to Rails. I can&rsquo;t remember a time when I have been exposed to material of this breadth, depth, and usefulness. But I&rsquo;m having a particularly hard time with remembering the five digit elevator code to get access to the second floor.</p>
+
+<p>I was fine the first time, even the second round, which had some sequential numbers in it. But my brain seems to be too full to commit the latest five digit code to memory.</p>
+
+<p>There are simple analog solutions, like writting the code on my hand or on a piece of paper. But why do that when it seemed like the perfect excuse to toy around with the Pebble Software Developer Kit.</p>
+
+<p>Having spent a whopping five days learning Javascript, I felt expert enough to dive into <a href="http://developer.getpebble.com/docs/pebblejs/">PebbleJS</a>, a Javascript based watch application tool (still in Beta) to see if I could code a solution to my Elevator Code conundrum.</p>
+
+<p>I had a lot of fancy ideas about triggering a location or time-based reminder. Or even creating a JSON endpoint that could be updated and read remotely. But we are in project mode and I have a tech talk to prepare for next week. So I have put the fancy features in the icebox and opted for a six-line solution. Essentially, I am using Pebble&rsquo;s UI library, creating a <code>Card</code> object and displaying it on the screen.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">UI</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ui&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Create a Card with title and subtitle</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">card</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UI</span><span class="p">.</span><span class="nx">Card</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">title</span><span class="o">:</span><span class="s2">&quot;Elevator Code&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">subtitle</span><span class="o">:</span><span class="s1">&#39;26452&#39;</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Display the Card</span>
+</span><span class='line'><span class="nx">card</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, of course, that&rsquo;s not the real code, so don&rsquo;t get any ideas about coming to Flatiron with it. The only way to get into the school is to apply.</p>
+
+<p><img src="http://dadhoc.com/wp-content/uploads/2015/05/Screen-Shot-2015-05-26-at-7.16.12-AM.png"></p>
+
+<p>Pebble raised over $10 million dollars in May of 2012 with their first Kickstarter campaign making the the largest and most successful campaign of the time. They did it again with their new watch, which raised $20,338,986 with over 74,000 backers in March of this year. The Pebble community is active and its core users are dedicated.</p>
+
+<p>Also, the Pebble Developer tools are very easy to use. CloudPebble is an online console and development environment that also handles deploying to your watch - including an online watch emulator. And they have spent a lot of time making the API easy to use with lots of sample code.. For example, making an ajax call is fairly straightforward.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Make the request</span>
+</span><span class='line'><span class="nx">ajax</span><span class="p">(</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>    <span class="nx">url</span><span class="o">:</span> <span class="nx">URL</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Success!</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Successfully fetched weather data!&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Failure!</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Failed fetching weather data: &#39;</span> <span class="o">+</span> <span class="nx">error</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We don&rsquo;t know how many Apple Watches have been sold, but its clear that the wearable market - whether its big or small - is not just a fad. As a programmers, its good to think of the small screen on the wrist as an extension of any application. Certainly, PebbleJS is a good place for anyone with Javascript experience to get started.</p>
+
+<p>If your project team has time, you might want to think about creating a JSON endpoint to open up your data to the world of wearables.</p>
+
+
+        <hr class="divider-short"/>
+
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2015/05/25/the-elevator-code-on-your-wrist/" title="Previous Post: The Elevator Code On Your Wrist">&laquo; Previous: The Elevator Code On Your Wrist</a>
+        
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/chadruble"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/cruble"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Powered by <a href="http://octopress.org/">Octopress</a>. Designed by <a href="http://AdrianArtiles.com">Adrian Artiles</a>.</h4>
+</div>
+
+
+    </div>
+  </div>
+</footer>
+
+    
+  </body>
+</html>
